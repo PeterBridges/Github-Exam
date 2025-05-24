@@ -9,7 +9,7 @@ mkdir git_project
 cd git_project
 git init
 touch Readme.md
-code Readme.md
+open Readme.md
 git status
 git commit -a -m "add Readme.md"
 ```
