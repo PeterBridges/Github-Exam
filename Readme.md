@@ -21,26 +21,63 @@ We can clone a repo using three different ways:
 ### HTTPS
 
 ```
-git clone
+git clone https://github.com/PeterBridges/Github-Exam.git
 ```
 
 ### Commit 
 
-When we want to commit code we can write git commit which will open up the commit edit message in the editor
+When we want to commit code we can write git commit which will open up the commit edit message in the editor. It represents additions, modifications and deletions of files. Each commit has a SHA hash. d4868abcc0c686147eddff7b2635e4920645858c
 
+```
+git commit -m "Add x changes"
+git commit -a -m "Add x changes" 
+git commit --amend
+git checkout SHA
+```
+
+### Branch
+
+Where we can make changes without affecting the entire project we're working on. We can have feature 1 branch, feature 2 branch , main branch and production branch, where we usually have the software releases. 
+The process of creating, merging branches etc its called the github workflow. 
+
+```
+git branch
+git branch -m [branch name]
+git checkout [branch name]
+git checkout -b [branch name]
+git branch -d [branch name]
+git branch -m [old name][new name]
+```
+
+###Remote 
 
 ### Git Config 
 
 Is when it stores the global configurations for git such as email, username, editor, etc. 
+Example of config file:
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = ...
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+	vscode-merge-base = origin/main
+[branch "production]
+    remote = origin
+    merge = refs/heads/production
+    vscode-merge-base = origin/production
 
-```
-git config --list
-```
 
-```
-git config --global user.name 
-git config --global user.email
-```
+
+
+
 
 ### Log
 
