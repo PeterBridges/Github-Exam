@@ -49,11 +49,21 @@ git branch -d [branch name]
 git branch -m [old name][new name]
 ```
 
-###Remote 
+### Remote 
+
+```
+git remote -v
+git remote -add [name][url]
+git remote remove [name]
+git remote rename [old name][new name]
+git push
+git pull 
+git fetch
 
 ### Git Config 
 
 Is when it stores the global configurations for git such as email, username, editor, etc. 
+
 Example of config file:
 [core]
 	repositoryformatversion = 0
@@ -75,8 +85,13 @@ Example of config file:
     vscode-merge-base = origin/production
 
 
+### SSH keys
 
+```
+ssh-keygen -t rsa
+```
 
+A copy of the private and public key are held in your local computer and a copy of the public key is in github. Github sends a challenge message with the public key and it can only be decrypted with the private key. 
 
 
 ### Log
